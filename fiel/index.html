@@ -9,14 +9,11 @@
 <meta property="og:description" content="Costanza & Fiel Advocacia — toque para ligar, enviar e-mail, abrir o site ou salvar o contato.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="https://cartao.advocaciacf.com.br/og-fiel.jpg">
-<meta property="og:image:secure_url" content="https://cartao.advocaciacf.com.br/og-fiel.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/jpeg">
 <meta property="og:url" content="https://cartao.advocaciacf.com.br/fiel/">
 <meta property="og:site_name" content="Costanza & Fiel Advocacia">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Edson Fiel Filho · Advogado">
 <meta name="twitter:image" content="https://cartao.advocaciacf.com.br/og-fiel.jpg">
 
 <meta name="theme-color" content="#000000">
@@ -46,11 +43,11 @@
   .header .hint{margin-top:14px;font-size:10px;letter-spacing:2px;color:var(--mute);text-transform:uppercase}
 
   .orbit{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-  .ring{position:absolute;border-radius:50%;border:1px solid var(--hair)}
+  .ring{position:absolute;border-radius:50%;border:1px solid var(--hair);pointer-events:none}
   .ring.r1{width:360px;height:360px}
   .ring.r2{width:480px;height:480px;border-color:rgba(255,255,255,.05)}
 
-  .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:30;
+  .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:30;pointer-events:none;
     width:96px;height:96px;display:flex;align-items:center;justify-content:center}
   .core .halo,.core .halo2{position:absolute;border-radius:50%;border:1px solid rgba(210,129,74,.4)}
   .core .halo{width:96px;height:96px;animation:ping 3s cubic-bezier(0,0,.2,1) infinite}
@@ -196,7 +193,7 @@
       var rad = ang*Math.PI/180;
       var x = radius*Math.cos(rad), y = radius*Math.sin(rad);
       var depth = (1+Math.sin(rad))/2;
-      var z = Math.round(10 + 40*Math.cos(rad));
+      var z = Math.round(55 + 40*Math.cos(rad));
       var op = (activeIdx===i)?1:Math.max(.45, .45+.55*depth);
       var sc = (activeIdx===i)?1:(0.9 + 0.18*depth);
       var el = nodeEls[i];
